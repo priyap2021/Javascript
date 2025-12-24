@@ -1,0 +1,378 @@
+
+body {
+    background-color: rgb(196, 238, 255);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+
+
+}
+
+.snowman {
+    position: relative;
+}
+
+.hat-top {
+    height: 50px;
+    width: 70px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.red {
+    height: 5px;
+    width: 120px;
+    background-color: rgb(251, 32, 4);
+    margin: 0 auto;
+}
+
+.hat-bottom {
+
+    height: 20px;
+    width: 120px;
+    background-color: black;
+    margin: 0 auto;
+
+
+}
+
+.hat {
+    position: absolute;
+    left: 88px;
+    top: -20px;
+}
+
+.circle1 {
+
+    height: 100px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(249, 247, 247);
+    border: 2px solid black;
+    position: relative;
+    top: 50px;
+    left: 70px;
+
+
+}
+
+.circle2 {
+
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    top: 30px;
+    left: 50px;
+
+
+
+
+
+}
+
+.btn5,
+.btn6 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    right: 90px;
+    bottom: 100px;
+
+}
+
+.btn6 {
+    top: 80px;
+}
+
+
+.circle3 {
+
+    height: 250px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    right: 150px;
+    bottom: 200px;
+
+}
+
+.btn2 {
+    bottom: 150px;
+
+}
+
+.btn3 {
+    bottom: 100px;
+}
+
+.btn4 {
+    bottom: 50px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+}
+
+.eye.left {
+    left: 40px;
+}
+
+.eye.right {
+    right: 40px;
+}
+
+.white {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+}
+
+.white.left {
+    left: 3px;
+}
+
+.white.right {
+    right: 3px;
+}
+
+.nose {
+    /* width: 10px;
+    height: 0; */
+    /* background-color: orange; */
+    border-bottom: 20px solid orange;
+    border-right: 20px solid transparent;
+    
+
+    position: absolute;
+    top: 50px;
+    left: 70px;
+}
+
+.arm {
+    width: 100px;
+    height: 4px;
+    background: brown;
+    position: absolute;
+    top: 170px;
+}
+
+/* Left hand */
+.left {
+    left: -32px;
+
+}
+
+/* Right hand */
+.right {
+    right: -30px;
+}
+
+.arrowl {
+
+    width: 20px;
+    height: 4px;
+    background: brown;
+    position: absolute;
+    /* top: 10px; */
+}
+
+.arrowl.left1 {
+    top: -10px;
+    transform: rotate(-135deg);
+
+}
+
+.arrowl.left2 {
+    top: 10px;
+    transform: rotate(135deg);
+}
+
+.arrowr {
+
+    width: 20px;
+    height: 4px;
+    background: brown;
+    position: absolute;
+    left: 80px;
+    /* top: 10px; */
+}
+
+.arrowr.right1 {
+    top: -10px;
+    transform: rotate(-45deg);
+
+
+}
+
+.arrowr.right2 {
+    top: 10px;
+    transform: rotate(45deg);
+
+}
+
+.square {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(244, 187, 187);
+    position: absolute;
+    left: 50px;
+
+}
+/* .icon{
+    font-size: 50px;
+    color: white; 
+    position: absolute;
+    top:-50px;
+    animation: fall 5s linear infinite;
+    
+   
+
+}
+
+@keyframes fall{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}  */
+body {
+  margin: 0;
+  height: 100vh;
+  background: #b7d6ed;
+  overflow: hidden;
+}
+
+.snow-container {
+  position: fixed;
+top:0px;
+right:0px;
+bottom: 0px;
+left:0px;
+
+  
+}
+
+.snowflake {
+  position: relative;
+  top: -10%;
+  color: white;
+  font-size: 50px;
+  animation: fall linear infinite;
+  
+}
+
+/* Randomize each snowflake */
+.snowflake{
+  left: 10%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  position: absolute;
+}
+.snowflake:nth-child(1) {
+  left: 20%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+.snowflake:nth-child(2) {
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+.snowflake:nth-child(3) {
+  left: 40%;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+.snowflake:nth-child(5) {
+  left: 50%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+.snowflake:nth-child(6) {
+  left: 60%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+.snowflake:nth-child(7) {
+  left: 70%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+.snowflake:nth-child(8) {
+  left: 80%;
+  animation-duration: 15s;
+  animation-delay: 1s;
+
+}
+.snowflake:nth-child(9) {
+  left: 90%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+.snowflake:nth-child(10) {
+  left: 95%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+.snowflake:nth-child(11) {
+  left: 55%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+.snowflake:nth-child(12) {
+  left: 35%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh)rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+
